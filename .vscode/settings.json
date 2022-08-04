@@ -1,16 +1,9 @@
 {
   "python.testing.pytestArgs": [
-    "tests"
+    "tests",
+    "--cov",
+    "--cov-report=xml"
   ],
   "python.testing.unittestEnabled": false,
   "python.testing.pytestEnabled": true,
-  "my-code-actions.actions": {
-    "[python]": {
-      "create new methond {{diag:$1}}": {
-        "diagnostics": ["\"(.*?)\" is not defined"],
-        "text": "def {{diag:$1}}():\n    pass\n",
-        "where": "afterLast",
-      }
-    }
-  }
 }
